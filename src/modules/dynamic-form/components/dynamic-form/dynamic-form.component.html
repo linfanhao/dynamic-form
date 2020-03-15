@@ -1,0 +1,14 @@
+<div class="dynamic-form-container" (ngSubmit)="submitHandler()">
+  <form class="dynamic-form" nz-form [formGroup]="formGroup">
+    <ng-container *ngFor="let formConfig of formConfigs">
+      <div appDynamicForm [formConfig]="formConfig" [formGroup]="formGroup"></div>
+    </ng-container>
+
+    <nz-form-item nz-row class="submit-area" *ngIf="formConfigs?.length">
+      <nz-form-control [nzSpan]="14" [nzOffset]="6">
+        <button nz-button nzType="primary" (click)="submitHandler()">Submit</button>
+      </nz-form-control>
+    </nz-form-item>
+
+  </form>
+</div>

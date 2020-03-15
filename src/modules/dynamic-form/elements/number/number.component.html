@@ -1,0 +1,6 @@
+<nz-form-item [formGroup]="formGroup">
+  <nz-form-label [nzSpan]="6" nzFor="email">{{formConfig.label}}</nz-form-label>
+  <nz-form-control [nzSpan]="14" nzErrorTip="该项为必填项">
+    <nz-input-number [formControlName]="formConfig.controlName" [nzMin]="0" [nzStep]="1"></nz-input-number>
+  </nz-form-control>
+</nz-form-item>

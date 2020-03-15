@@ -1,0 +1,11 @@
+<nz-form-item [formGroup]="formGroup">
+  <nz-form-label [nzSpan]="6" nzFor="email">{{formConfig.label}}</nz-form-label>
+  <nz-form-control [nzSpan]="14" nzErrorTip="该项为必填项">
+
+    <nz-radio-group [formControlName]="formConfig.controlName">
+      <label nz-radio [nzValue]="option.value" *ngFor="let option of formConfig.options">{{option.label}}</label>
+    </nz-radio-group>
+
+
+  </nz-form-control>
+</nz-form-item>

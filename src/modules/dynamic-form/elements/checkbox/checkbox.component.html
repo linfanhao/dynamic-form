@@ -1,0 +1,6 @@
+<nz-form-item [formGroup]="formGroup">
+  <nz-form-label [nzSpan]="6" [nzRequired]="formConfig?.required">{{formConfig.label}}</nz-form-label>
+  <nz-form-control [nzSpan]="14" nzErrorTip="该项为必选项">
+    <label nz-checkbox [formControlName]="formConfig.controlName"></label>
+  </nz-form-control>
+</nz-form-item>
